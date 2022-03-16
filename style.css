@@ -1,0 +1,207 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #1E1E1E;
+    --text-color: black;
+    --task-color: white;
+    --footer-color: #1E1E1E;
+    --theme-btn: url('assets/Dark-theme-btn.svg');
+    --container-bg: url('assets/Light-empty.svg');
+    --complete-icon: url('assets/complete.svg');
+    --filter: none;
+    --theme-transition: 0s;
+}
+
+* {
+    font-family: "Times New Roman";
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: var(--primary-color);
+}
+
+.theme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 15px 0 0;
+}
+
+.theme-btn {
+    outline: none;
+    appearance: none;
+    border: none;
+    padding: 20px;
+    margin-right: 40px;
+    margin-top: 15px;
+    background-image: var(--theme-btn);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#clear {
+    outline: none;
+    appearance: none;
+    border: none;
+    padding: 20px;
+    margin-right: 40px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.theme-btn:hover {
+    background-size: 85%;
+    transition: 0.5s;
+    transform: rotate(90deg);
+}
+
+.text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media(min-width:1024px) {
+    .text {
+        margin-top: 5px;
+        text-align: center;
+    }
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0 35px;
+    color: var(--text-color);
+}
+
+.tasks {
+    margin: 20px 0px;
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+.listItem {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 7px;
+    background-color: var(--task-color);
+    color: var(--text-color);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.listItem:hover {
+    transition: 0.5s;
+    border: 1px rgba(148, 148, 148, 0.63) solid;
+    cursor: pointer;
+    background-color: rgba(226, 226, 226, 0.192);
+}
+
+.check-item {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.task_bio {
+    font-size: 18px;
+}
+
+.task_list_empty {
+    transition: 0s;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-image: var(--container-bg);
+}
+
+@media(min-width:1024px) {
+    .task_list_empty {
+        transition: 0s;
+        background-position: center;
+        background-size: 20%;
+        background-repeat: no-repeat;
+        background-image: var(--container-bg);
+    }
+}
+
+.task-completed {
+    transition: 0.5s;
+    transform: scale(90%);
+    text-decoration: line-through;
+    color: rgb(150, 150, 150);
+    opacity: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    padding: 15px 10px;
+    min-width: 100%;
+    background-color: var(--footer-color);
+    border: 5px var(--footer-color) solid;
+}
+
+footer form {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+#new_task_input {
+    min-width: 250px;
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px rgba(255, 255, 255, 0.267) solid;
+}
+
+#new_task_input::placeholder {
+    color: rgba(255, 255, 255, 0.589);
+    font-size: 20px;
+    font-family: "Times New Roman";
+}
+
+#new_task_input_btn {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    background-image: url("assets/new.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    cursor: pointer;
+}
+
+.taskCompleted {
+    visibility: hidden;
+}

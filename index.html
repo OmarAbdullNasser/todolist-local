@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list v1</title>
+    <!--Fontaswome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container task_list_empty">
+        <header>
+            <div class="theme">
+                <button id="clear">clear all</button>
+                <button class="theme-btn"></button>
+            </div>
+
+            <div class="text"> <span class="heading">My Day</span></div>
+        </header>
+
+        <section class="tasks">
+            <ul id="tasksList"></ul>
+        </section>
+
+        <footer>
+            <form id="new_task_form">
+                <input type="text" name="new_task_input" id="new_task_input" placeholder="Create New Task" value="" />
+                <button id="new_task_input_btn" type="submit"></button>
+            </form>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
