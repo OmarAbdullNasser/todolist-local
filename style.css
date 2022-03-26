@@ -20,17 +20,18 @@
 
 html,
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
 }
 
 .container {
-    position: relative;
+    min-height: 100vh;
+    position: absolute;
     width: 100%;
-    height: 100%;
     margin: 0 auto;
     background: var(--primary-color);
 }
@@ -39,7 +40,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-right: 15px 0 0;
 }
 
 .theme-btn {
@@ -47,7 +47,6 @@ body {
     appearance: none;
     border: none;
     padding: 20px;
-    margin-right: 40px;
     margin-top: 15px;
     background-image: var(--theme-btn);
     background-position: center;
@@ -85,7 +84,6 @@ body {
 @media(min-width:1024px) {
     .text {
         margin-top: 5px;
-        text-align: center;
     }
 }
 
@@ -107,6 +105,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 10px;
     margin-left: 10px;
     border: 2px solid var(--secondary-color);
@@ -135,7 +134,7 @@ body {
 
 .task_list_empty {
     transition: 0s;
-    background-position: center;
+    background-position: 50% 70%;
     background-size: 50%;
     background-repeat: no-repeat;
     background-image: var(--container-bg);
@@ -144,7 +143,7 @@ body {
 @media(min-width:1024px) {
     .task_list_empty {
         transition: 0s;
-        background-position: center;
+        background-position: 50% 70%;
         background-size: 20%;
         background-repeat: no-repeat;
         background-image: var(--container-bg);
@@ -159,25 +158,25 @@ body {
     opacity: 0;
 }
 
-footer {
-    position: absolute;
-    bottom: 0px;
+.input_form {
+    margin-top: 20px;
     padding: 15px 10px;
     min-width: 100%;
-    background-color: var(--footer-color);
+    background-color: var(--secondary-color);
     border: 5px var(--footer-color) solid;
+    color: #1E1E1E;
 }
 
-footer form {
+.input_form form {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
 #new_task_input {
     min-width: 250px;
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 20px;
     color: white;
     background-color: transparent;
@@ -200,6 +199,19 @@ footer form {
     background-repeat: no-repeat;
     background-size: 80%;
     cursor: pointer;
+}
+
+.edit {
+    background: none;
+    border: 0px;
+    color: var(--text-color);
+    font-size: 20px;
+    margin-left: 120px;
+    cursor: pointer;
+}
+
+.edit:hover {
+    color: red;
 }
 
 .taskCompleted {
